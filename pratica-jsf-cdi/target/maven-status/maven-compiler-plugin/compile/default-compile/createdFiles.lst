@@ -1,0 +1,6 @@
+br\edu\ifpb\praticas\pratica\jsf\cdi\entidades\Cliente.class
+br\edu\ifpb\praticas\pratica\jsf\cdi\controller\ClienteController.class
+br\edu\ifpb\praticas\pratica\jsf\cdi\dao\ClienteDao.class
+br\edu\ifpb\praticas\pratica\jsf\cdi\controller\NewMain.class
+br\edu\ifpb\praticas\pratica\jsf\cdi\util\ProdutorEntityManager.class
+br\edu\ifpb\praticas\pratica\jsf\cdi\dao\ClienteDaoImpl.class

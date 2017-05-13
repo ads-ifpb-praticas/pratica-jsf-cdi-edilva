@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="bootstrap.min.css" />
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="row">
+                <h1 align="center">Gerenciamento de Clientes - JSF</h1>
+                <div class="btn-group form-group col-md-12">
+                    <h:link outcome="index.xhtml" class="btn btn-success">Cadastro</h:link>
+                    <h:link outcome="gerenciamento.xhtml" class="btn btn-primary">Gerenciamento</h:link>
+                </div>
+                <ui:insert name="corpo"></ui:insert>
+            </div>
+        </div>
+    </h:body>
+</html>
+

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/template.xhtml">
+            <ui:define name="corpo">
+                <h3>Informações do Cliente</h3>
+                <br/>
+                <h2>#{clienteController.cliente.nome}</h2>
+                <p><strong>CPF: </strong>#{clienteController.cliente.email}</p>
+                <p><strong>E-mail: </strong>#{clienteController.cliente.cpf}</p>
+                <p><strong>Celular: </strong>#{clienteController.cliente.celular}</p>
+                <p><strong>Telefone: </strong>#{clienteController.cliente.telefone}</p>
+                <hr></hr>
+                <p><strong>Observações:</strong></p>
+                <p>#{clienteController.cliente.observacoes}</p>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

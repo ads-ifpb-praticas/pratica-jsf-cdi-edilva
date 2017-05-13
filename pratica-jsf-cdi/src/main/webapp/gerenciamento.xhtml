@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/template.xhtml">
+            <ui:define name="corpo">
+                <form>
+                    <h:dataTable var="c" value="#{clienteController.listar()}">
+                        <f:facet name="header">
+                            Lista Clientes
+                        </f:facet>
+                        <h:column>
+                            <f:facet name="header">Nome</f:facet>
+                            <h:outputText value="#{c.nome}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Email</f:facet>
+                            <h:outputText value="#{c.email}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">CPF</f:facet>
+                            <h:outputText value="#{c.cpf}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Detalhar</f:facet>
+                            <h:commandButton value="Remover" action="#{clienteController.exibir(c)}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Editar</f:facet>
+                            <h:button title="Editar" outcome="/editarCliente.xhtml"/>
+                            <f:param name="id" value="#{c.id}" />
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Remover</f:facet>
+                            <h:commandButton value="Remover" action="#{clienteController.excluir(c)}"/>
+                        </h:column>
+                    </h:dataTable>
+                </form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
